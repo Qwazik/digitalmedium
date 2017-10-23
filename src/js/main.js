@@ -123,6 +123,7 @@ if(location.origin == 'https://qwazik.github.io'){
             'Компании':'companys-catalog.html',
             'Карточка компании':'company-card.html',
             'Типовая':'inner.html',
+            'Пост':'post.html',
             '404':'404.html'
         });
     });
