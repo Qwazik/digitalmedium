@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Слой_1"
+   data-name="Слой 1"
+   viewBox="0 0 155.9 137.58911"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo-blue.svg"
+   width="155.89999"
+   height="137.58911">
+  <metadata
+     id="metadata41">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>logo-blue</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1341"
+     inkscape:window-height="622"
+     id="namedview39"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.8106005"
+     inkscape:cx="231.31"
+     inkscape:cy="53.793471"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Слой_1" />
+  <defs
+     id="defs3">
+    <style
+       id="style5">.cls-1{fill:#007aff;}.cls-2{fill:#1f00ff;}.cls-3{fill:#2f2f3f;}</style>
+  </defs>
+  <title
+     id="title7">logo-blue</title>
+  <path
+     class="cls-1"
+     d="M 0,12.269106 0,125.33911 c 0,6.76 6.21,12.25 13.88,12.25 l 128.09,0 c 12.36,0 18.55,-13.19 9.81,-20.91 L 23.69,3.6091059 C 14.95,-4.1008941 0,1.3591059 0,12.269106 Z"
+     id="path9"
+     inkscape:connector-curvature="0"
+     style="fill:#007aff" />
+  <path
+     class="cls-2"
+     d="m 155.9,12.269106 0,113.070004 c 0,6.76 -6.21,12.25 -13.88,12.25 l -128.09,0 c -12.36,0 -18.55,-13.19 -9.81,-20.91 L 132.21,3.6091059 c 8.74,-7.71 23.69,-2.25 23.69,8.6600001 z"
+     id="path11"
+     inkscape:connector-curvature="0"
+     style="fill:#1f00ff" />
+</svg>

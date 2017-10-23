@@ -1,0 +1,7 @@
+mixin newsItemSmall(image, mark, title)
+	.news-item.news-item--small(class=selected)
+		a(href="#").news-item__image(style="background-image: url("+image+")")
+		.news-item__content
+			.top
+				.marked.marked--wh.grey= mark
+				a(href="#").title!= title

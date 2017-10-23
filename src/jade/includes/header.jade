@@ -1,0 +1,25 @@
+header.main-header
+	.container-fluid
+		.logo
+			a(href="/")
+				img(src="img/logo-blue.svg", alt="Digital medium")
+				img(src="img/logo-blue-small.svg", alt="Digital medium").mobile
+		form(action="#").header-search
+			button: i.icm.icon-magnifier
+			.header-search__input
+				input(type="text" name="s")
+		nav.main-nav
+			ul
+				li: a(href="#") Публикации
+				li: a(href="#") Компании
+				li: a(href="#") Календарь событий
+				li: a(href="#") О проекте
+		.fl-right
+			ul.social
+				li: a(href="#"): i.icm.icon-vk
+				li: a(href="#"): i.icm.icon-fb
+				li: a(href="#"): i.icm.icon-tw
+			button.responsive-menu#menuBtn
+				span
+				span
+				span

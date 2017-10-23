@@ -1,0 +1,193 @@
+extends _template
+
+block main
+	.container		
+		main
+			.row
+				.col-xs-12
+					ul.breadcrumbs
+						li: a(href="#") Главная
+						li: a(href="#") Компании
+						li: a(href="#") Demis Group
+					.mb-default
+						.dt.dt--header
+							.dtc: h1 Demis Group
+							.dtc.ta-right
+								.u-want
+									span Хочешь в каталог? 
+									a(href="#") Подать заявку
+			.row
+				.col-md-4.mb-default
+					.box.box--type2.company-card
+						.img: img(src="pic/demis-group.jpg", alt="")
+						p Агентство <b>Demis Group</b> имеет самый результативный на российском SEO-рынке клиентский портфель, в том числе лидирует более чем в 20 отраслевых подрейтингах «Рейтинга Рунета».
+				.col-md-4.mb-default
+					.box.box--type1.company-card__specialization
+						.box__header
+							i.icm.icon-darts
+							span Специализация
+						.box__body
+							.box-row.spec
+								.marked-list
+									.marked.marked--wh.blue seo
+									.marked.marked--wh.purple smm
+									.marked.marked--wh.pink Мобильная реклама
+							.box-row.otr
+								.box-row__header
+									i.icm.icon-zavod
+									span Отрасли
+								.marked-list
+									.marked.marked--wh.green промышленность
+									.marked.marked--wh.lightgreen недвижимость
+									.marked.marked--wh.lightgreen финансы
+									.marked.marked--wh.lightgreen туризм
+									.marked.marked--wh.lightgreen строительство
+									.marked.marked--wh.lightgreen авто
+									.marked.marked--wh.lightgreen медицина
+				.col-md-4.mb-default
+					.company-card__stats
+						table
+							tr
+								td Общий балл
+								td
+									.rating-value 
+										span.mask 8.6
+									a(href="#") Как формируется ?
+							tr
+								td Ценовой сегмент
+								td
+									ul.seo-price-segment(class="price-2")
+											li
+											li
+											li
+											li
+											li
+							tr
+								td Упоминания в СМИ
+								td 
+									i.icm.icon-newspaper
+									span 3 924
+							tr
+								td Выручка компании
+								td 
+									span 320 млн. руб.
+							tr
+								td Кол-во сотрудников
+								td 
+									i.icm.icon-person
+									span 121
+			.long-block.long-block--callback
+				.justify
+					.col
+						.dt.dt--icon-box.left
+							.dtc: i.icm.icon-airplane
+							.dtc Cвязаться с <br> Demis
+					.col
+						i.icm.icon-phone
+						a(href="tel:+78002094578") <b>8 800 209 450 78</b>
+					.col
+						a(href="mailto:order@netpeak.ru").marked.marked--white 
+							i.icm.icon-envelope
+							span order@netpeak.ru
+					.col.address
+						i.icm.icon-map-marker
+						span <b>Москва,</b> Михайловcкий пр-т, 20, офис 709 
+			.mb-default
+				.box-content.box-content--default.box-content-about
+					h2 О компании
+					.row
+						.col-md-6
+							p В результате юзабилити-аудита мы увидели не только проблемы с регистрацией, но и гораздо более важные проблемы, связанные с пониманием сути сайта в целом. Пользователи не понимали, о чём сайт, не понимали, что делать на этом сайте, и не понимали пользы, которую этот сайт может им принести.
+							p Непосредственно сам процесс регистрации вызвал меньше всего вопросов — на сайте предусмотрена удобная функция регистрации через социальные сети, которой многие пользовались.
+						.col-md-6
+							ul.ul.ul--angle
+								li Поисковая оптимизация и продвижение сайтов (SEO).
+								li Продвижение Бизнеса в социальных сетях (SMM).
+								li Улучшение продающих качеств сайтов.
+								li Контекстная и медийная реклама.
+								li Управление репутацией в интернете (SERM).
+								li Создание и техническая поддержка сайтов.
+			.seo-table
+				.seo-table__head
+					h2 Похожие компании
+				.seo-table__table
+					table
+						thead.js-sort-seo
+							tr
+								td: a(href="#") Название компании
+								td: a(href="#") Общий бал
+								td: a(href="#") Ценовой сегмент
+								td: a(href="#") Упоминания в сми
+								td: a(href="#") Выручка компании*
+								td: a(href="#") Кол-во сотрудников
+								td
+								td
+						tbody
+							-for(i=1;i<5;i++)
+								tr
+									td
+										.img: img(src="pic/seo-table-co"+i+".jpg", alt="")
+										a(href="#") Ingate
+									td
+										.rating-value
+											span.mask
+											span=10-i+'.'+i
+									td
+										ul.seo-price-segment(class="price-"+i+"")
+											li
+											li
+											li
+											li
+											li
+									td
+										i.icm.icon-newspaper
+										span=(Math.random()*10000).toFixed(0)
+									td
+										span=(Math.random()*1000).toFixed(0) + ' млн.'
+									td
+										i.icm.icon-person
+										span=(Math.random()*100).toFixed(0)
+									td
+										.seo-envelope
+											a(href="#").js-toggler: i.icm.icon-envelope
+											.seo-envelope__info
+												.col
+													.dt.dt--icon-box
+														.dtc
+															i.icm.icon-map-marker
+														.dtc
+															p: b Москва
+															p Михайловcкий пр-т, 20<br> офис 709
+												.col
+													ul.contacts
+														li: a(href="tel:+780020945078")
+															i.icm.icon-phone
+															span 8 800 209 450 78
+														li: a(href="mailto:order@netpeak.ru")
+															i.icm.icon-envelope
+															span order@netpeak.ru
+
+									td
+										label.checkbox
+											input(type="checkbox")
+											span
+			button.news-more Все компании
+	hr.sep
+	.container
+		.mb-default
+			.side-widget__header
+				i.icm.icon-badge
+				span Популярное
+			.row
+				include includes/news-item--small
+				.col-sm-4: +newsItemSmall('pic/news-small1.jpg', 'Бренды', 'Telegram-канал о технологиях и бизнесе в Китае')
+				.col-sm-4: +newsItemSmall('pic/news-small2.jpg', 'Контекстная реклама', 'Интегральный рейтинг цитируемости российских СМИ')
+				.col-sm-4: +newsItemSmall('pic/news-small3.jpg', 'Продвижение сайтов', '5 причин плохих слоганов и креативов')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+
+
+						
+
+

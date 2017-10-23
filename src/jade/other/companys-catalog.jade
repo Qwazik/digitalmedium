@@ -1,0 +1,174 @@
+extends _template
+
+block main
+	.container		
+		main
+			.row
+				.col-xs-12
+					ul.breadcrumbs
+						li: a(href="#") Главная
+						li: a(href="#") Компании
+					.mb-default
+						.dt.dt--header
+							.dtc: h1 Каталог компаний
+							.dtc.ta-right
+								.u-want
+									span Хочешь в каталог? 
+									a(href="#") Подать заявку
+				aside.col-md-3
+					.companys-logo.mb-default
+						.inner
+							.num 538
+							p Компаний в <br> нашем каталоге
+						a(href="#").marked.marked--yellow
+							i.icm.icon-noexajlu
+							span Как попасть в каталог
+					.text-banner.mb-default
+						<a href="#">Продвижение сайтов — основная специализация компаний, собранных в данном рейтинге.</a><p>Методология построения прозрачна: в рейтинге учитывается количество продвигаемых сайтов, а также их тИЦ. Чем больше у компании сайтов на продвижении и чем выше их оценка с точки зрения Яндекса — тем выше занимаемая SEO-компанией строчка. Чтобы получить максимально достоверные результаты, в рамках рейтинга было изучено 37 864 проекта.</p>
+				.col-md-9
+					h2.text-small Специализация
+					ul.marked-list
+						li.marked.marked--default.js-toggler
+							span seo
+							span.num 230
+						li.marked.marked--default.js-toggler
+							span контекстная реклама
+							span.num 230
+						li.marked.marked--default.js-toggler
+							span smm
+							span.num 230
+						li.marked.marked--default.js-toggler
+							span мобильная реклама
+							span.num 230
+						li.marked.marked--default.js-toggler
+							span медийная реклама
+							span.num 230
+						li.marked.marked--default.js-toggler
+							span разработка сайтов и приложений
+							span.num 230
+					button#toggleFilter.js-toggler Фильтр
+					.companys-filter
+						.col
+							.title Ценовые диапазоны
+							.select-wrap: select
+								option(value="value") Lorem.
+								option(value="value") Dicta!
+								option(value="value") Omnis.
+								option(value="value") Voluptate.
+						.col
+							.title Тональность упоминаний
+							.select-wrap: select
+								option(value="value") Lorem.
+								option(value="value") Sequi.
+								option(value="value") Sapiente!
+								option(value="value") Consequatur.
+						.col
+							.title Город
+							.select-wrap: select
+								option(value="value") Lorem.
+								option(value="value") Nemo.
+								option(value="value") Ab.
+								option(value="value") Laboriosam!
+						.col
+							.title Кол-во сотрудников
+							.select-wrap: select
+								option(value="value") Lorem.
+								option(value="value") Quis.
+								option(value="value") Labore.
+								option(value="value") Molestiae.
+					.seo-table
+						.seo-table__head
+							.dt.dt--header
+								.dtc
+									h2 SEO
+									span 230 Компаний
+								.dtc
+									.sort-col
+										.title Кол-во на странице
+										ul
+											li.active: a(href="#") 15
+											li: a(href="#") 25
+											li: a(href="#") 50
+											li: a(href="#") 100
+											li: a(href="#") Все
+						.seo-table__table
+							table
+								thead.js-sort-seo
+									tr
+										td: a(href="#") Название компании
+										td: a(href="#") Общий бал
+										td: a(href="#") Ценовой сегмент
+										td: a(href="#") Упоминания в сми
+										td: a(href="#") Выручка компании*
+										td: a(href="#") Кол-во сотрудников
+										td
+										td
+								tbody
+									-for(i=1;i<11;i++)
+										tr
+											td
+												.img: img(src="pic/seo-table-co"+i+".jpg", alt="")
+												a(href="#") Ingate
+											td
+												.rating-value
+													span.mask=10-i+'.'+i
+											td
+												ul.seo-price-segment(class="price-"+i+"")
+													li
+													li
+													li
+													li
+													li
+											td
+												i.icm.icon-newspaper
+												span=(Math.random()*10000).toFixed(0)
+											td
+												span=(Math.random()*1000).toFixed(0) + ' млн.'
+											td
+												i.icm.icon-person
+												span=(Math.random()*100).toFixed(0)
+											td
+												.seo-envelope
+													a(href="#").js-toggler: i.icm.icon-envelope
+													.seo-envelope__info
+														.col
+															.dt.dt--icon-box
+																.dtc
+																	i.icm.icon-map-marker
+																.dtc
+																	p: b Москва
+																	p Михайловcкий пр-т, 20<br> офис 709
+														.col
+															ul.contacts
+																li: a(href="tel:+780020945078")
+																	i.icm.icon-phone
+																	span 8 800 209 450 78
+																li: a(href="mailto:order@netpeak.ru")
+																	i.icm.icon-envelope
+																	span order@netpeak.ru
+
+											td
+												label.checkbox
+													input(type="checkbox")
+													span
+					button.news-more Показать еще
+					p.desc-text * Выручка компании указана в рублях. Доход компании за один год.
+	hr.sep
+	.container
+		.mb-default
+			.side-widget__header
+				i.icm.icon-badge
+				span Популярное
+			.row
+				include includes/news-item--small
+				.col-sm-4: +newsItemSmall('pic/news-small1.jpg', 'Бренды', 'Telegram-канал о технологиях и бизнесе в Китае')
+				.col-sm-4: +newsItemSmall('pic/news-small2.jpg', 'Контекстная реклама', 'Интегральный рейтинг цитируемости российских СМИ')
+				.col-sm-4: +newsItemSmall('pic/news-small3.jpg', 'Продвижение сайтов', '5 причин плохих слоганов и креативов')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+
+
+						
+
+

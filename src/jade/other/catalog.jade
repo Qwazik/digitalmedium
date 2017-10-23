@@ -1,0 +1,76 @@
+extends _template
+
+block main
+	.container		
+		main
+			.row
+				.col-xs-12
+					ul.breadcrumbs
+						li: a(href="#") Главная
+						li: a(href="#") Публикации
+						li: a(href="#") Медийная реклама
+					.mb-default
+						h1 Медийная реклама
+				.col-md-8
+					a(href="#").img-article-item.img-article-item--horizontal.black-mask
+						.img-article-item__image: img(src="pic/img-article-item2.jpg", alt="")
+						.img-article-item__content
+							.marked.marked--wh.grey Социальные медиа
+							.name Критерии выбора <br> блогера для рекламы <br> в Instagram
+					
+					.main-news
+						include includes/news-item
+						.row
+							.col-md-12.col-sm-6: +newsItem('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item2.jpg','Видеомаркетинг','Инструменты менеджера для нагрева покупателей', 'pic/news-photo2.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item3.jpg','Мобильная реклама','Немецкий алгоритм научился создавать инструкции в дополненной реальности на основе обычных видео', 'pic/news-photo3.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+							.col-md-12
+								.subscribe-box
+									.dt.dt--header
+										.dtc
+											p.header Будь в курсе
+											p Подпишитесь на новости <b>Digital Medium</b> и вы всегда будете в курсе событий!
+										.dtc
+											a(href="#").btn.btn--green 
+												i.icm.icon-go-mail
+												span Подписаться
+							.col-md-12.col-sm-6: +newsItem('pic/news-item5.jpg','Медийная реклама','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo5.jpg', 'Анастасия Коваленко', 'Дироктор  BSR Group', '14  сентября ‘17', 59, '2 775')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item4.jpg','Контекстная реклама','Дайджест. Краткий перевод свежих статей о digital', 'pic/news-photo4.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920', 'spec')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item5.jpg','Медийная реклама','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo5.jpg', 'Анастасия Коваленко', 'Дироктор  BSR Group', '14  сентября ‘17', 59, '2 775')
+							.col-md-12
+								.pagination
+									ul.pages
+										li: a(href="") 1
+										li.active: a(href="") 2
+										li: a(href="") 3
+										li: a(href="") 4
+										li: a(href="") 5
+										li: span ...
+										li: a(href="") 54
+									ul.controls
+										li: a(href=""): i.icm.icon-angle-left 
+										li: a(href=""): i.icm.icon-angle-right
+
+
+				aside.col-md-4
+					include includes/side-category
+					include includes/rating-side
+	hr.sep
+	.container
+		.mb-default
+			.side-widget__header
+				i.icm.icon-badge
+				span Популярное
+			.row
+				include includes/news-item--small
+				.col-sm-4: +newsItemSmall('pic/news-small1.jpg', 'Бренды', 'Telegram-канал о технологиях и бизнесе в Китае')
+				.col-sm-4: +newsItemSmall('pic/news-small2.jpg', 'Контекстная реклама', 'Интегральный рейтинг цитируемости российских СМИ')
+				.col-sm-4: +newsItemSmall('pic/news-small3.jpg', 'Продвижение сайтов', '5 причин плохих слоганов и креативов')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+
+
+						
+
+

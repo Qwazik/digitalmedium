@@ -1,0 +1,140 @@
+extends _template-post
+include includes/news-item--small
+block main
+	.container		
+		main
+			.row
+				.col-xs-12
+					ul.breadcrumbs
+						li: a(href="#") Главная
+						li: a(href="#") Публикации
+						li: a(href="#") Типовая страница
+					.post-header.dt.dt--header
+						.dtc
+							h1 <span>Препарируем по-живому:</span> <br> юзабилити-аудит реального <br> сайта
+							
+						.dtc
+							.news-author
+								.dt.dt--icon-box
+									.dtc
+										.photo.big: img(src="pic/author-photo-big.jpg", alt="")
+									.dtc
+										span.name Анастасия Коваленко
+										span.who Дироктор  BSR Group
+					.props
+						.marked.marked--wh Медийная реклама
+						time 25 сентября'17
+						.likes.js-toggler <i class="icm icon-like"></i> 25
+						.views <i class="icm icon-eye"></i> 2 950
+			.row
+				.col-md-8
+					.content-section
+						.img-responsive.post-image
+							img(src="pic/lime.jpg", alt="")
+						p.text-ls Однажды нашему краудсорсинговому проекту <a href="#">uxcrowd</a> довелось тестировать другой краудсорсинговый проект «КраудСпейс». Произошло это случайно: мы проводили конкурс на бесплатное юзабилити-тестирование и ребята выиграли.
+						.text-box.text-box--grey.mb-medium
+							.text-box__name Заказчик хотел проанализировать юзабилити своего сайта.
+							ol.ol.ol--black
+								li Проверить, понимают ли пользователи назначение их платформы.
+								li Проверить регистрацию и потенциал активности пользователей.
+						section.mb-medium
+							h2 Какие задания мы придумали для <br> юзабилити-тестирования
+							ol.ol.ol--black.mb-default
+								li.mb-default  Скажите, что это за сайт, опишите суть сайта в двух–трёх словах. Опишите своё первое впечатление от сайта.
+								li.mb-default Что в первую очередь вы бы стали делать на этом сайте? Пожалуйста, выполните эти действия прямо сейчас и опишите впечатления.
+								li.mb-default Выберите один из активных проектов и расскажите, каким образом вы можете поучаствовать в данном проекте, какое вознаграждение вам за это полагается и что нужно сделать, чтобы его получить?
+							.video-responsive.mb-default
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allowfullscreen></iframe>
+							p <b>Причина:</b> Заголовки подразделов на странице плохо выделены.
+							p <b>Рекомендация по юзабилити:</b> поработать над оформлением: отдельные блоки должны быть чётко выделены и заметны.
+						section.mb-medium
+							h2 Как с этим бороться?
+							p Более того, для разных проектов заложена разная логика: в проекте «Банки в антикризисе» надо зайти во вкладку «Задания», а в проекте «Бизнес-книга» такой вкладки нет
+							p Ориентироваться на удобство для пользователя. А пользователю удобно зайти, прочитать краткое описание проекта, например, «Выбираем бизнес-книгу года» и сразу увидеть список заданий с описанием того, что ему надо делать
+							p Следующий шаг. Пользователь готов поучаствовать в проекте. Он хочет проголосовать за других пользователей, но не может этого сделать
+							p В интерфейсе нет никаких подсказок, как голосовать на сайте. Точнее на странице проекта вообще никак не сообщается, что здесь можно голосовать.Кнопки голосования не активны без регистрации на сайте. Точнее это вообще не кнопки. Пользователь может только предположить, что он сможет голосовать, если зарегистрируется, но никаких подсказок в интерфейсе нет.
+						section.mb-medium
+							h2 Итог
+							p В результате юзабилити-аудита мы увидели не только проблемы с регистрацией, но и гораздо более важные проблемы, связанные с пониманием сути сайта в целом. Пользователи не понимали, о чём сайт, не понимали, что делать на этом сайте, и не понимали пользы, которую этот сайт может им принести
+							p Непосредственно сам процесс регистрации вызвал меньше всего вопросов — на сайте предусмотрена удобная функция регистрации через социальные сети, которой многие пользовались
+							p В заключение посмотрите видео, на котором пользователь сумел разобраться с проектом, но так и не понял, как получить вознаграждение за участие.
+					.soc-share.mb-default
+						.title Поделиться
+						ul.soc-share__list
+							li.soc-share__item: a(href="#")
+								i.icm.icon-vk
+								span Вконтакте
+							li.soc-share__item: a(href="#")
+								i.icm.icon-fb
+								span Вконтакте
+							li.soc-share__item: a(href="#")
+								i.icm.icon-tw
+								span Вконтакте
+							li.soc-share__item: a(href="#")
+								i.icm.icon-googleplus
+								span Вконтакте
+					
+				aside.col-md-4
+					.text-box.text-box--default
+						a(href="#").image: img(src="pic/home-digital-rating.svg", alt="")
+						.text
+							.marked.marked--wh.text-box__marked Продвижение сайтов
+							a(href="#").text-box__name Ключевые рейтинги digital-рынка России
+							time.text-box__date 25  сентября ‘17
+					+newsItemVertical('pic/news-item3.jpg','Мобильная реклама','Немецкий алгоритм научился создавать инструкции в дополненной реальности на основе обычных видео', 'pic/news-photo3.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+					include includes/rating-side
+					include includes/news-item--vertical
+					.subscribe-box
+						.dt.dt--header
+							.dtc
+								p.header Будь в курсе
+								p Подпишитесь на новости <b>Digital Medium</b> и вы всегда будете в курсе событий!
+							.dtc
+								a(href="#").btn.btn--green 
+									i.icm.icon-go-mail
+									span Подписаться
+	.bg-grey.popular-publish
+		.container
+			.side-widget__header
+				i.icm.icon-similiar-article
+				span Похожие публикации
+			.row
+				.col-md-4.col-sm-6
+					+newsItemVertical('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+				.col-md-4.col-sm-6
+					+newsItemSmall('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+					+newsItemSmall('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+					<a href="#" class="img-text"><img src="pic/promotion-img-text.jpg" alt=""><span>Занимаетесь маркетингом или продажами? Примите участие в опросе</span></a>
+					+newsItemSmall('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+				.col-md-4.col-sm-6
+					+newsItemSmall('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+					a(href="#").item.ad-block
+						.dt
+							.dtc
+								img(src="pic/site-promotion-img2.jpg" alt="")
+							.dtc Юзабилити мобильных e-commerce сайтов: вопрос главной страницы 
+					+newsItemSmall('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+					+newsItemSmall('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+	.big-section.popular-cat
+		.container
+			.mb-medium
+				.side-widget__header
+					i.icm.icon-popular-cat
+					span Популярные категории
+				.row
+					.col-sm-4: .site-promotion__item
+						.title Продвижение
+						a(href="#").item 22 инсайда о структуре российских digital-агентств. В инфографике
+						a(href="#").item <b class="color-blue">Ecommerce.</b> Главные тренды мобильного ритейла в 2017 году (исследование Criteo)
+					.col-sm-4: .site-promotion__item
+						.title Контекстная реклама
+						a(href="#").item
+							.dt
+								.dtc
+									img(src="pic/site-promotion-img1.jpg" alt="")
+								.dtc Связь между количеством ключевых слов и эффективностью контекстной рекламы
+						a(href="#").item Электронные технологии на билетном рынке. <b class="color-blue">Тренды-2017</b>
+					.col-sm-4: .site-promotion__item
+						.title Мобильная реклама
+						a(href="#").item: b.color-blue Как промокоды влияют на поведение интернет-покупателей: исследование
+						a(href="#").item Кнопки «Поделиться» на сайтах — поведение читателей и предпочтения владельцев веб-страниц

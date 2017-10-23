@@ -1,0 +1,121 @@
+extends _template
+
+block main
+	.container		
+		main
+			.row
+				.col-xs-12
+					ul.breadcrumbs
+						li: a(href="#") Главная
+						li: a(href="#") Публикации
+						li: a(href="#") Типовая страница
+					.mb-medium
+						h1 Типовая страница
+				.col-md-8
+					.content-section
+						p.text-ls Однажды нашему краудсорсинговому проекту <a href="#">uxcrowd</a> довелось тестировать другой краудсорсинговый проект «КраудСпейс». Произошло это случайно: мы проводили конкурс на бесплатное юзабилити-тестирование и ребята выиграли.
+						.icon-text
+							.icon
+								i.icm.icon-ib-book
+							p <b>Интернет-маркетинг </b>(англ. <i>internet marketing</i>) — практика использования всех аспектов традиционного маркетинга в Интернете, с целью продажи продукта или услуги покупателям и управление взаимоотношениями с ними.
+						h2 Заголовок H2
+						p Более того, для разных проектов заложена разная логика: в проекте «Банки в антикризисе» надо зайти во вкладку «Задания», а в проекте <a href="#">«Бизнес-книга</a>» такой вкладки нет.
+						p.border-p Интернет-маркетинг является составляющей электронной коммерции. Его также называют online-маркетингом.
+						p <b>Следующий шаг.</b> Пользователь готов поучаствовать в проекте. Он хочет проголосовать за других пользователей, но не может этого сделать.
+						h3 Заголовок h3
+						.row
+							.col-md-6
+								ul.ul.ul--default
+									li медийная реклама
+									li контекстная реклама
+									li поисковый маркетинг
+									li в целом и SEO в частности
+									li продвижение в социальных сетях: SMO и SMM
+							.col-md-6
+								ol.ol.ol--default
+									li вирусный маркетинг
+									li партизанский маркетинг
+									li интернет-брендинг
+									li email-маркетинг
+									li контент-маркетинг
+						table.table.table--default.mb-medium
+							thead
+								tr
+									td #
+									td Категория
+									td Частота
+									td Позиция
+							tbody
+								-for(i=0;i<5;i++)
+									tr
+										td=i+'.'
+										td Интернет магазины
+										td=(Math.random()*1000).toFixed(0)
+										td=(Math.random()*10).toFixed(0)
+						.big-text-section.mb-medium
+							.dt
+								.dtc 
+									i.icm.icon-big-text
+								.dtc
+									.title Это наша миссия
+									p Формирование первичного ядра поисковых запросов
+						.big-image-section.mb-medium
+							.dt
+								.dtc: img(src="pic/it-boy.jpg", alt="")
+								.dtc
+									span.title Издание о маркетинге в сети
+									p <b>Интернет-маркетинг</b> в первую очередь предоставляет потребителю возможность получить информацию о товарах. Любой потенциальный потребитель может, используя интернет, получить информацию о товаре, а также <a href="#">купить его</a>. Хотя, если там не будет информации об одном товаре, или он её не найдёт, то, скорее всего он приобретёт другой товар у конкурента.
+						.big-form.box-content.box-content--default.mb-medium
+							.dt.dt--header
+								.dtc Хочу в каталог
+								.dtc: a(href="#") Требования
+							.title Заявка
+							.row
+								.col-sm-12.mb-default
+									input.input(type="text" placeholder="Название компании")
+							.row
+								.col-sm-6.mb-default
+									input.input(type="text" placeholder="Адрес сайта")
+								.col-sm-6.mb-default
+									select.select.select--green
+										option(value="dfssdf") Основное направление
+										option(value="dfssdf") Основное направление
+										option(value="dfssdf") Основное направление
+							.row
+								.col-sm-6.mb-default
+									input.input(type="text" placeholder="Телефон")
+								.col-sm-6.mb-default
+									input.input(type="text" placeholder="Контактное лицо")
+							.row
+								.col-sm-12.mb-default
+									textarea(placeholder="Дополнительно").input
+							.row
+								.col-xs-6.col-xxs-12
+									label.sogl
+										label.checkbox
+											input(type="checkbox")
+											span
+										span  Я прочитал условия
+								.col-xs-6.ta-right.col-xxs-12
+									button(type="submit").btn.btn--blue
+										span Отправить
+										i.icm.icon-airplane
+				aside.col-md-4
+					include includes/side-category
+					include includes/rating-side
+					include includes/news-item--vertical
+					+newsItemVertical('pic/news-item3.jpg','Мобильная реклама','Немецкий алгоритм научился создавать инструкции в дополненной реальности на основе обычных видео', 'pic/news-photo3.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+	hr.sep
+	.container
+		.mb-medium
+			.side-widget__header
+				i.icm.icon-badge
+				span Популярное
+			.row
+				include includes/news-item--small
+				.col-sm-4: +newsItemSmall('pic/news-small1.jpg', 'Бренды', 'Telegram-канал о технологиях и бизнесе в Китае')
+				.col-sm-4: +newsItemSmall('pic/news-small2.jpg', 'Контекстная реклама', 'Интегральный рейтинг цитируемости российских СМИ')
+				.col-sm-4: +newsItemSmall('pic/news-small3.jpg', 'Продвижение сайтов', '5 причин плохих слоганов и креативов')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')

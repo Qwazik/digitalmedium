@@ -1,0 +1,39 @@
+extends _template
+
+block main
+	.container		
+		main
+			.row
+				.col-xs-12
+					ul.breadcrumbs
+						li: a(href="#") Главная
+						li: a(href="#") Публикации
+						li: a(href="#") Медийная реклама
+				.col-xs-12
+					.page404
+						.text
+							h1 404
+							p Ой, что-то <br> пошло не так...
+							small Такой страницы не существует. Приносим <br> свои извинения за неудобства.
+						a(href="/").btn.btn--green
+							i.icm.icon-back
+							span На главную
+	hr.sep
+	.container
+		.mb-default
+			.side-widget__header
+				i.icm.icon-badge
+				span Популярное
+			.row
+				include includes/news-item--small
+				.col-sm-4: +newsItemSmall('pic/news-small1.jpg', 'Бренды', 'Telegram-канал о технологиях и бизнесе в Китае')
+				.col-sm-4: +newsItemSmall('pic/news-small2.jpg', 'Контекстная реклама', 'Интегральный рейтинг цитируемости российских СМИ')
+				.col-sm-4: +newsItemSmall('pic/news-small3.jpg', 'Продвижение сайтов', '5 причин плохих слоганов и креативов')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+				.col-sm-4: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+
+
+						
+
+

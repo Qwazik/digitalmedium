@@ -1,0 +1,116 @@
+extends _template
+
+block main
+	.container
+		.long-block
+			.left
+				.popular-long-icon
+					span Популярные <br> темы
+			.right
+				ul.marks.inline
+					li: a(href="#").marked.marked--white Продвижение в соц сетях
+					li: a(href="#").marked.marked--white Instagram
+					li: a(href="#").marked.marked--white Бренд-айдентика
+					li: a(href="#").marked.marked--white Контекстная реклама
+					li: a(href="#").marked.marked--white Видеомаркетинг
+		.home-articles
+			.row
+				.col-md-6
+					a(href="#").img-article-item
+						.img-article-item__image: img(src="pic/home-big-image.jpg", alt="")
+						.img-article-item__content
+							.marked.marked--wh Социальные медиа
+							.name Критерии выбора <br> блогера для рекламы <br> в Instagram
+							.date 25  сентября ‘17
+				.col-md-6
+					.text-box.text-box--default
+						a(href="#").image: img(src="pic/home-digital-rating.svg", alt="")
+						.text-box__icon: i.icm.icon-rivet
+						.text
+							.marked.marked--wh.text-box__marked Продвижение сайтов
+							a(href="#").text-box__name Ключевые рейтинги digital-рынка России
+							time.text-box__date 25  сентября ‘17
+					.text-box.text-box--border
+						a(href="#").image: img(src="pic/home-aidentica.png", alt="")
+						.text
+							.marked.marked--wh.text-box__marked Бренды
+							a(href="#").text-box__name Бренд-айдентика для американского стартапа от российских дизайнеров
+							time.text-box__date 23  сентября ‘17
+					.text-box.box-content
+						.text-box__icon: a(href="#") Еще
+						.box-content__header Контекстная реклама
+						.box-content__sep
+						ul.box-content__list
+							li: a(href="#"): b Исследование: больше четверти результатов в топ-20 выдачи Google не собирает клики
+							li: a(href="#") Короткий путь в «Яндекс». Компания проведёт конкурс для разработчиков
+							li: a(href="#") Instagram запустил в «Историях» интерактивную рекламу Canvas
+		.info-long
+			.nav
+				button.prev
+					i.icm.icon-angle-left
+				button.next
+					i.icm.icon-angle-right
+			.owl-carousel
+				-for(i=0; i<5;i++)
+					.info-long__item
+						.left
+							.desc
+								span.marked.marked--wh.blue Совет
+								span.marked.marked--wh.grey SMM маркетинг
+							a(href="#").name SMM-агентство vs специалист в штате: что выбрать
+							button.likes.js-toggler
+								i.icm.icon-like
+								span 28
+							.views
+								i.icm.icon-eye
+								span 6002
+		main
+			.row
+				.col-md-8
+					.subscribe-box
+						.dt.dt--header
+							.dtc
+								p.header Будь в курсе
+								p Подпишитесь на новости <b>Digital Medium</b> и вы всегда будете в курсе событий!
+							.dtc
+								a(href="#").btn.btn--green 
+									i.icm.icon-go-mail
+									span Подписаться
+					
+					.main-news
+						include includes/news-item
+						.row
+							.col-md-12.col-sm-6: +newsItem('pic/news-item1.jpg','Разработка сайтов и приложений','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item2.jpg','Видеомаркетинг','Инструменты менеджера для нагрева покупателей', 'pic/news-photo2.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item3.jpg','Мобильная реклама','Немецкий алгоритм научился создавать инструкции в дополненной реальности на основе обычных видео', 'pic/news-photo3.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item4.jpg','Контекстная реклама','Дайджест. Краткий перевод свежих статей о digital', 'pic/news-photo4.jpg', 'Виктор Павленко', 'Маркетолог Satellite Media', '27  сентября ‘17', 16, '2 920', 'selected')
+							.col-md-12.col-sm-6: +newsItem('pic/news-item5.jpg','Медийная реклама','<span class="color-blue">Тренды</span>. А не пора ли переделать сайт?', 'pic/news-photo5.jpg', 'Анастасия Коваленко', 'Дироктор  BSR Group', '14  сентября ‘17', 59, '2 775')
+						button.news-more Показать еще
+				aside.col-md-4
+					include includes/rating-side
+					.side-widget
+						p.title Добавить компанию
+						.text
+							p Если Вы владелец или представитель web-агенства в России, Вы можете подать заявку на добавление в наш каталог.
+						a(href="#").btn.btn--blue
+							i.add-icon +
+							span Подать заявку
+					.side-news
+						.side-news__header
+							i.icm.icon-media-bottles
+							span Медиа исследования
+						include includes/news-item--small
+						.row
+							.col-md-12.col-sm-6: +newsItemSmall('pic/news-small1.jpg', 'Бренды', 'Telegram-канал о технологиях и бизнесе в Китае')
+							.col-md-12.col-sm-6: +newsItemSmall('pic/news-small2.jpg', 'Контекстная реклама', 'Интегральный рейтинг цитируемости российских СМИ')
+							.col-md-12.col-sm-6: +newsItemSmall('pic/news-small3.jpg', 'Продвижение сайтов', '5 причин плохих слоганов и креативов')
+							.col-md-12.col-sm-6: +newsItemSmall('pic/news-small4.jpg', 'Разработка сайтов', 'Как изменения в законе «О персональных данных» повлияют ...')
+						.side-news__footer
+							a(href="#") Статьи по теме
+				.col-md-12
+					include includes/site-promotion
+
+
+						
+
+

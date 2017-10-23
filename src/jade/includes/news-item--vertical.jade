@@ -1,0 +1,27 @@
+mixin newsItemVertical(image, mark, title, authorPhoto, authorName, authorWho, date, likes, views, selected)
+	.news-item.news-item--vertical(class=selected)
+		span.readmore Читайте также
+		a(href="#").news-item__image(style="background-image: url("+image+")")
+		.news-item__content
+			.top
+				a(href="#").marked.marked--wh.grey= mark
+				-if(selected=='spec')
+					a(href="#").marked.marked--wh.green Спецпроект
+				a(href="#").title!= title
+			.bottom
+				.news-author
+					.dt.dt--icon-box
+						.dtc
+							.photo
+								img(src=authorPhoto, alt="Автор")
+						.dtc
+							.name= authorName
+							.who= authorWho
+				.news-item__footer
+					time(datetime="2017-09-27")= date
+					button.likes.js-toggler
+						i.icm.icon-like
+						span= likes
+					.views
+						i.icm.icon-eye
+						span= views
